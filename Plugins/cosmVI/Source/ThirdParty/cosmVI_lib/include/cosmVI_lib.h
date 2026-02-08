@@ -4,10 +4,19 @@
 #include <stdint.h>
 #include <stddef.h>
 
+#if defined(_WIN32)
 #ifdef COSMVI_EXPORTS
 #define COSMVI_LIB_API __declspec(dllexport)
 #else
 #define COSMVI_LIB_API __declspec(dllimport)
+#endif
+#else
+// Linux (GCC/Clang) の設定
+#if __GNUC__ >= 4
+#define COSMVI_LIB_API __attribute__ ((visibility ("default")))
+#else
+#define COSMVI_LIB_API
+#endif
 #endif
 
 #ifdef __cplusplus
@@ -29,7 +38,7 @@ extern "C" {
      */
     typedef enum cosmVI_Status {
         COSMVI_SUCCESS = 0,
-        COSMVI_INFO_QUEUE_EMPTY = 1, // PollEvent専用: キューは空
+        COSMVI_INFO_QUEUE_EMPTY = 1, // PollEvent専用: キューは空だった
         COSMVI_ERROR_INVALID_HANDLE,
         COSMVI_ERROR_INVALID_ARGUMENT,
         COSMVI_ERROR_INITIALIZATION_FAILED,
@@ -37,9 +46,9 @@ extern "C" {
         COSMVI_ERROR_NOT_INITIALIZED,
         COSMVI_ERROR_ALREADY_RUNNING,
         COSMVI_ERROR_NOT_RUNNING,
-        COSMVI_ERROR_INVALID_STATE,
+        COSMVI_ERROR_INVALID_STATE, // 不正な状態でのAPI呼び出し
         COSMVI_ERROR_AUDIO_ENGINE_FAILED,
-        // ... エラーコードを付け足すのなら付け足しなさいまし。（気力は湧かないし何を付け足せばいいのかも分からない...）
+        // ... その他の詳細なエラーコード
         COSMVI_ERROR_UNKNOWN_ERROR
     } cosmVI_Status;
 
@@ -50,8 +59,8 @@ extern "C" {
         COSMVI_STATE_UNINITIALIZED,
         COSMVI_STATE_INITIALIZING,
         COSMVI_STATE_IDLE,       // 初期化完了、待機中
-        COSMVI_STATE_RUNNING,
-        COSMVI_STATE_PAUSED,
+        COSMVI_STATE_RUNNING,    // 音声認識実行中
+        COSMVI_STATE_PAUSED,     // 音声認識一時停止中
         COSMVI_STATE_STOPPING,
         COSMVI_STATE_ERROR
     } cosmVI_State;

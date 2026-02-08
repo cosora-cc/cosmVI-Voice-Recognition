@@ -1,17 +1,17 @@
-﻿{
+{
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0",
+	"VersionName": "0.0",
 	"FriendlyName": "cosmVI",
 	"Description": "",
 	"Category": "Other",
 	"CreatedBy": "cosora",
 	"CreatedByURL": "",
-	"DocsURL": "",
+	"DocsURL": "https://github.com/cosora-cc/cosmVI-Voice-Recognition",
 	"MarketplaceURL": "",
 	"SupportURL": "",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
+	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
@@ -21,7 +21,7 @@
 			"LoadingPhase": "Default",
 			"PlatformAllowList": [
 				"Win64",
-        "Linux"
+				"Linux"
 			]
 		}
 	],
