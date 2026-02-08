@@ -1,0 +1,32 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "cosmVI",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "cosora",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "cosmVI",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+        "Linux"
+			]
+		}
+	],
+	"SupportedTargetPlatforms": [
+		"Win64",
+		"Linux"
+	]
+}

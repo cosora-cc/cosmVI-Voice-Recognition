@@ -1,0 +1,7 @@
+﻿・他プラットフォーム対応
+		cosmVI.cppを修正。cosmVI.Build.csを修正。lib/内にちゃんと追加する。cosmVI_lib_Build.csを修正。DLL遅延をちゃんとしないとダメだよ。
+|x| - Windows
+| | - Linux系
+| | - Android
+| | - Mac
+| | - iPhone
