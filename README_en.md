@@ -25,7 +25,6 @@ All models used are licensed under **Apache 2.0**.
 
 **Supported versions: Unreal Engine 5.6~5.7**
 
-**[Booth](https://cosora.booth.pm/items/7958007)** (Following my store account means you'll get notifications for updates, and it keeps me motivated!)
 
 This is the packaged version. If you can package it yourself, cloning this repository and packaging it works just as well.
 
@@ -39,8 +38,8 @@ If you can package the plugin yourself, we recommend cloning this GitHub reposit
 ### Pre-Packaged Plugin Version and Platform Compatibility Chart
 | UE Version | Windows | macOS | Linux | iOS | Android |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **5.7** | ✅ | ❌ | ✅ | ❌ | ❌ |
-| **5.6** | ✅ | ❌ | ✅ | ❌ | ❌ |
+| **5.7** | 🛠️ | ❌ | 🛠️ | ❌ | ❌ |
+| **5.6** | 🛠️ | ❌ | 🛠️ | ❌ | ❌ |
 | **5.5** | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **5.4** | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **5.3** | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -49,7 +48,7 @@ If you can package the plugin yourself, we recommend cloning this GitHub reposit
 | **5.0** | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 
-Items marked with ✅ are distributed as packaged items via Booth.
+Items marked with ✅ are available as free packages on GitHub Releases. Items marked with 🛠️ are in preparation. Items marked with ❌ have no estimated release date.
 
 ### Supported Languages
 | Japanese | English | French | German | Italian | Chinese | ... | Korean |
